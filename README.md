@@ -1,5 +1,5 @@
-# raspi-ssh-banner
-A custom SSH banner script for my Raspberry Pi
+# Raspi-ssh-banner
+A custom SSH banner script a Raspberry Pi
 
 ##
 I wanted a custom SSH banner for my Raspberry Pi, one that would tell me a bit about its current status, and statistics
@@ -12,9 +12,11 @@ heavily modified for use for anyone other than...me. You'll just have to dig int
 adapt it for your own use - it's not exactly a ton of code, but it's not commented and I don't exactly have the best 
 code practices. 
 
-Anyway, to get the script working, you'll need a Python 3.6+ installation on your Raspberry Pi. Unfortunately, AFAIK
-this will have to be compiled from scratch, but anyone who's had a bit of Linux experience will be fine (download/unzip 
-source, `./configure`, `make`, `sudo make altinstall`). 
+Anyway, to get the script working, you'll need a Python 3.6+ so you will onlu need to do is: 
+
+```bash
+sudo apt-get install python3.7
+```
 
 After installing Python, you'll need to purge the existing MotD, if you'd like. Google a bit and you should find all of 
 the files you need to change, or you can set `PrintMotd` to `no` in `/etc/ssh/sshd_config`. Optionally you can remove 
